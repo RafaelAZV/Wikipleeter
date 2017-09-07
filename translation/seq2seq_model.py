@@ -25,7 +25,7 @@ import numpy as np
 from six.moves import xrange  # pylint: disable=redefined-builtin
 import tensorflow as tf
 
-import data_utils
+from data_utils import *
 
 
 class Seq2SeqModel(object):
@@ -270,6 +270,8 @@ class Seq2SeqModel(object):
       The triple (encoder_inputs, decoder_inputs, target_weights) for
       the constructed batch that has the proper format to call step(...) later.
     """
+    data_utils = DataUtils()
+    
     encoder_size, decoder_size = self.buckets[bucket_id]
     encoder_inputs, decoder_inputs = [], []
 

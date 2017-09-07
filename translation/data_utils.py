@@ -9,23 +9,23 @@ from tensorflow.python.platform import gfile
 
 import tensorflow as tf
 
-# Special vocabulary symbols - we always put them at the start.
-_PAD = b"_PAD"
-_GO = b"_GO"
-_EOS = b"_EOS"
-_UNK = b"_UNK"
-_START_VOCAB = [_PAD, _GO, _EOS, _UNK]
-
-PAD_ID = 0
-GO_ID = 1
-EOS_ID = 2
-UNK_ID = 3
-
-# Regular expressions used to tokenize.
-_WORD_SPLIT = re.compile(b"([.,!?\"':;)(])")
-_DIGIT_RE = re.compile(br"\d")
-
 class DataUtils():
+
+  # Special vocabulary symbols - we always put them at the start.
+  _PAD = b"_PAD"
+  _GO = b"_GO"
+  _EOS = b"_EOS"
+  _UNK = b"_UNK"
+  _START_VOCAB = [_PAD, _GO, _EOS, _UNK]
+
+  PAD_ID = 0
+  GO_ID = 1
+  EOS_ID = 2
+  UNK_ID = 3
+
+  # Regular expressions used to tokenize.
+  _WORD_SPLIT = re.compile(b"([.,!?\"':;)(])")
+  _DIGIT_RE = re.compile(br"\d")
 
   def basic_tokenizer(self, sentence):
     """Very basic tokenizer: split the sentence into a list of tokens."""

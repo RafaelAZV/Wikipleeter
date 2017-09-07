@@ -63,6 +63,8 @@ class ModelPipeline():
 	      len(target) < _buckets[n][1]; source and target are lists of token-ids.
 	  """
 	  data_set = [[] for _ in _buckets]
+	  
+	  data_utils = DataUtils()
 
 	  with tf.gfile.GFile(source_path, mode="r") as source_file:
 
