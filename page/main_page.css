@@ -1,0 +1,26 @@
+@import url(https://fonts.googleapis.com/css?family=Rokkitt:700);
+body{
+  font-family:"Tangerine";
+  font-size:30px;
+  background-color:#40e0d0;
+  font-weight:500;
+}
+h3{
+  font-family: "Tangerine";
+  font-size: 50px;
+  color:White;
+}
+
+.btn{
+  width:80px;
+  height:45px;
+  margin-bottom: 8px;
+  font-size:25px;
+  background-color:#40e0d0;
+}
+li{
+  color:#FF4500;
+}
+p{
+  color:White;
+}
